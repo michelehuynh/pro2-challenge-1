@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITSI powered by SpaceX</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img class="logo" src="assets/logo.svg" />
+        <div class="icons">
+          <img src="assets/signal.svg" />
+          <img src="assets/wifi.svg" />
+          <img src="assets/headset.svg" />
+          <img src="assets/translate.svg" />
+          <img src="assets/settings.svg" />
+        </div>
+      </header>
+      <div class="sidebar">
+        <div class="status-wrap">
+          <div class="status">
+            <div class="flex align-center">
+              <img class="icon" src="assets/rocket.svg" />
+              <p>ROCKET STATUS</p>
+            </div>
+            <div class="flex align-center">
+              <div class="status-dot"></div>
+              <p id="flight"></p>
+            </div>
+          </div>
+          <img class="rocket-img" src="assets/ship.png" />
+        </div>
+
+        <div class="status-wrap">
+          <div class="status">
+            <div class="flex align-center">
+              <img class="icon" src="assets/time.svg" />
+              <p>ARRIVING IN</p>
+            </div>
+            <p><span id="time"></span> seconds</p>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-time" class="progress"></div>
+          </div>
+        </div>
+
+        <div class="status-wrap">
+          <div class="status">
+            <div class="flex align-center">
+              <img class="icon" src="assets/time.svg" />
+              <p>DISTANCE</p>
+            </div>
+            <p><span id="distance"></span> meters</p>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-distance" class="progress"></div>
+          </div>
+          <div class="planets">
+            <img src="assets/earth.png" />
+            <img src="assets/destination-arrow.svg" />
+            <img src="assets/mars.png" />
+          </div>
+        </div>
+
+        <iframe
+          class="spotify-player"
+          src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
+          height="80"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
+      <div>
+        <h1 class="greeting">Good morning, Michele</h1>
+      </div>
+      <div class="inventory">
+        <button onclick="inventoryToggle()" id="inventory-toggle">
+          <span id="toggle-text">Show</span> supplies
+        </button>
+        <div id="inventory-list" style="display: none;" class="inventory-list">
+          <ul>
+            <li>Apples&nbsp;&nbsp;<span id="apples"></span></li>
+            <li>Mandarins&nbsp;&nbsp;<span id="mandarins"></span></li>
+            <li>Bananas&nbsp;&nbsp;<span id="bananas"></span></li>
+            <li>Raspberries&nbsp;&nbsp;<span id="raspberries"></span></li>
+            <li>Mangos&nbsp;&nbsp;<span id="mangos"></span></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
